@@ -21,7 +21,7 @@ class EmbeddingsPipeline {
       env.localModelPath = path.join(
         typeof __dirname === "undefined"
           ? // @ts-ignore
-            path.dirname(new URL(import.meta.url).pathname)
+            import.meta.dirname
           : __dirname,
         "..",
         "models",

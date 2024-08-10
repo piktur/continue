@@ -137,7 +137,7 @@ export async function getQueryForFile(
 
   const fullLangName = supportedLanguages[filepath.split(".").pop() ?? ""];
   const sourcePath = path.join(
-    __dirname,
+    import.meta.dirname,
     "..",
     "tree-sitter",
     queryType,
@@ -155,11 +155,9 @@ export async function getQueryForFile(
 async function loadLanguageForFileExt(
   fileExtension: string,
 ): Promise<Language> {
-  const wasmPath = path.join(
-    __dirname,
-    ...(process.env.NODE_ENV === "test"
-      ? ["node_modules", "tree-sitter-wasms", "out"]
-      : ["tree-sitter-wasms"]),
+  const wasmPath = path.resolve(
+    import.meta.resolve('tree-sitter-wasms'),
+    "out",
     `tree-sitter-${supportedLanguages[fileExtension]}.wasm`,
   );
   return await Parser.Language.load(wasmPath);

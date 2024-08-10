@@ -12,7 +12,7 @@ export class LlamaAsyncEncoder implements AsyncEncoder {
   private workerPool: workerpool.Pool;
 
   constructor() {
-    this.workerPool = workerpool.pool(path.join(__dirname, "/llamaTokenizerWorkerPool.mjs"));
+    this.workerPool = workerpool.pool(path.resolve(import.meta.dirname, "llamaTokenizerWorkerPool.mjs"));
   }
 
   async encode(text: string): Promise<number[]> {
