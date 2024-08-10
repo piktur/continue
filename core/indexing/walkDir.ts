@@ -1,6 +1,6 @@
 import ignore, { Ignore } from "ignore";
 import path from "node:path";
-import { FileType, IDE } from "../index.d.js";
+import { FileType, IDE } from "../index.js";
 import {
   DEFAULT_IGNORE_DIRS,
   DEFAULT_IGNORE_FILETYPES,

@@ -12,7 +12,7 @@ import {
   Range,
   RangeInFile,
   Thread,
-} from "../index.d.js";
+} from "../index.js";
 
 import { getContinueGlobalPath } from "./paths.js";
 
