@@ -1,6 +1,6 @@
 {
   "name": "@piktur/continuedev-core",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "The Continue Core contains functionality that can be shared across web, VS Code, or Node.js",
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
@@ -11,9 +11,16 @@
   "type": "module",
   "author": "Continue Dev, Inc",
   "license": "Apache-2.0",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js"
+    ".": {
+      "default": "./dist/core.js",
+      "types": "./index.d.ts"
+    },
+    "./*": {
+      "default": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.7",
