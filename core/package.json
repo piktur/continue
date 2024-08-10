@@ -1,5 +1,5 @@
 {
-  "name": "@continuedev/core",
+  "name": "@piktur/continuedev-core",
   "version": "1.0.13",
   "description": "The Continue Core contains functionality that can be shared across web, VS Code, or Node.js",
   "scripts": {
