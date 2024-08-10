@@ -1,3 +1,5 @@
-.env
-.vscode
-test
+*
+
+!dist/**/*
+!package.json
+!README.md
